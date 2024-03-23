@@ -210,3 +210,25 @@ thead tr {
     user-select: none; /* Prevents text selection */
     /* Removed margin-left as flexbox is used for spacing */
 }
+
+
+
+/* Mobile devices */
+@media (max-width: 768px) {
+    #selectedArmy {
+        position: static; /* Default positioning */
+        width: auto; /* Take the full width of its container */
+        max-height: none; /* Remove max height restriction */
+        margin-top: 20px; /* Add some space above for clarity */
+        box-shadow: none; /* Optional: Remove shadow for a cleaner look */
+    }
+
+    #container {
+        flex-direction: column; /* Stack children vertically */
+    }
+
+    #unitTable, #groundUnitTable {
+        width: 100%; /* Ensure tables take full width on smaller screens */
+        padding: 20px 0; /* Adjust padding for better spacing */
+    }
+}
