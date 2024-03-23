@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wargame Fleet Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="unitTable">
+            <h2>Available Ships</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Ship Type</th>
+            <th>Long ATK</th>
+            <th>Short ATK</th>
+            <th>Boarding</th>
+            <th>Durability</th>
+            <th>Armor & Shields</th>
+            <th>Transport</th>
+            <th>Speed</th>
+            <th>Cost Factor</th>
+            <th>Special Ab.</th>
+            <th>RP</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>Retribution Class Battleship</td>
+            <td>8</td>
+            <td>9</td>
+            <td>6</td>
+            <td>8</td>
+            <td>3SS</td>
+            <td>4</td>
+            <td>2</td>
+            <td>6</td>
+            <td>T3, B1, L2</td>
+            <td>34</td>
+            <td><button onclick="addUnit('Retribution Class Battleship', 34)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Apocalypse Class Battleship</td>
+            <td>9</td>
+            <td>8</td>
+            <td>6</td>
+            <td>8</td>
+            <td>3SS</td>
+            <td>4</td>
+            <td>1</td>
+            <td>6</td>
+            <td>N, L1</td>
+            <td>34</td>
+            <td><button onclick="addUnit('Apocalypse Class Battleship', 34)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Emperor Class Battleship</td>
+            <td>5</td>
+            <td>7</td>
+            <td>6</td>
+            <td>8</td>
+            <td>2SS</td>
+            <td>4</td>
+            <td>1</td>
+            <td>6</td>
+            <td>C8, B2, L2</td>
+            <td>34</td>
+            <td><button onclick="addUnit('Emperor Class Battleship', 34)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Vengeance Class Grand Cruiser</td>
+            <td>5</td>
+            <td>6</td>
+            <td>5</td>
+            <td>7</td>
+            <td>2S</td>
+            <td>3</td>
+            <td>2</td>
+            <td>5</td>
+            <td>L1, B</td>
+            <td>23</td>
+            <td><button onclick="addUnit('Vengeance Class Grand Cruiser', 23)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Avenger Class Grand Cruiser</td>
+            <td>4</td>
+            <td>7</td>
+            <td>5</td>
+            <td>7</td>
+            <td>2S</td>
+            <td>3</td>
+            <td>2</td>
+            <td>5</td>
+            <td>B2</td>
+            <td>20</td>
+            <td><button onclick="addUnit('Avenger Class Grand Cruiser', 20)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Overlord Class Battlecruiser</td>
+            <td>6</td>
+            <td>6</td>
+            <td>4</td>
+            <td>6</td>
+            <td>2S</td>
+            <td>1</td>
+            <td>2</td>
+            <td>5</td>
+            <td>T2, L2</td>
+            <td>22</td>
+            <td><button onclick="addUnit('Overlord Class Battlecruiser', 22)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Armageddon Class Battlecruiser</td>
+            <td>8</td>
+            <td>6</td>
+            <td>4</td>
+            <td>6</td>
+            <td>2S</td>
+            <td>1</td>
+            <td>2</td>
+            <td>5</td>
+            <td>N, L1</td>
+            <td>26</td>
+            <td><button onclick="addUnit('Armageddon Class Battlecruiser', 26)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Mars Class Battlecruiser</td>
+            <td>7</td>
+            <td>5</td>
+            <td>4</td>
+            <td>6</td>
+            <td>2S</td>
+            <td>1</td>
+            <td>2</td>
+            <td>5</td>
+            <td>N, C8, L1</td>
+            <td>27</td>
+            <td><button onclick="addUnit('Mars Class Battlecruiser', 27)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Dictator Class Cruiser</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>6</td>
+            <td>2S</td>
+            <td>2</td>
+            <td>2</td>
+            <td>4</td>
+            <td>T2, C4</td>
+            <td>22</td>
+            <td><button onclick="addUnit('Dictator Class Cruiser', 22)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Dominator Class Cruiser</td>
+            <td>6</td>
+            <td>5</td>
+            <td>4</td>
+            <td>6</td>
+            <td>2S</td>
+            <td>2</td>
+            <td>2</td>
+            <td>4</td>
+            <td>N, B</td>
+            <td>21</td>
+            <td><button onclick="addUnit('Dominator Class Cruiser', 21)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Tyrant Class Cruiser</td>
+            <td>4</td>
+            <td>5</td>
+            <td>4</td>
+            <td>6</td>
+            <td>2S</td>
+            <td>2</td>
+            <td>2</td>
+            <td>4</td>
+            <td>T2, B, L1</td>
+            <td>20</td>
+            <td><button onclick="addUnit('Tyrant Class Cruiser', 20)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Lunar Class Cruiser</td>
+            <td>5</td>
+            <td>5</td>
+            <td>4</td>
+            <td>6</td>
+            <td>2S</td>
+            <td>2</td>
+            <td>2</td>
+            <td>4</td>
+            <td>T2</td>
+            <td>18</td>
+            <td><button onclick="addUnit('Lunar Class Cruiser', 18)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Endeavour Class Light Cruiser</td>
+            <td>3</td>
+            <td>4</td>
+            <td>3</td>
+            <td>5</td>
+            <td>2</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>T1</td>
+            <td>12</td>
+            <td><button onclick="addUnit('Endeavour Class Light Cruiser', 12)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Defiant Class Light Cruiser</td>
+            <td>2</td>
+            <td>2</td>
+            <td>3</td>
+            <td>5</td>
+            <td>2</td>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>C2</td>
+            <td>12</td>
+            <td><button onclick="addUnit('Defiant Class Light Cruiser', 12)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Dauntless Class Light Cruiser</td>
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+            <td>4</td>
+            <td>2</td>
+            <td>0</td>
+            <td>3</td>
+            <td>3</td>
+            <td>nan</td>
+            <td>11</td>
+            <td><button onclick="addUnit('Dauntless Class Light Cruiser', 11)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Firestorm Class Frigate</td>
+            <td>3</td>
+            <td>1</td>
+            <td>1</td>
+            <td>3</td>
+            <td>1</td>
+            <td>0</td>
+            <td>3</td>
+            <td>2</td>
+            <td>nan</td>
+            <td>7</td>
+            <td><button onclick="addUnit('Firestorm Class Frigate', 7)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Sword Class Frigate</td>
+            <td>2</td>
+            <td>2</td>
+            <td>1</td>
+            <td>3</td>
+            <td>1</td>
+            <td>0</td>
+            <td>3</td>
+            <td>2</td>
+            <td>nan</td>
+            <td>6</td>
+            <td><button onclick="addUnit('Sword Class Frigate', 6)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Tempest Class Frigate</td>
+            <td>1</td>
+            <td>3</td>
+            <td>2</td>
+            <td>3</td>
+            <td>1</td>
+            <td>0</td>
+            <td>3</td>
+            <td>2</td>
+            <td>nan</td>
+            <td>6</td>
+            <td><button onclick="addUnit('Tempest Class Frigate', 6)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Cobra Class Destroyer</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>0</td>
+            <td>4</td>
+            <td>1</td>
+            <td>ST1</td>
+            <td>5</td>
+            <td><button onclick="addUnit('Cobra Class Destroyer', 5)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Claymore Class Corvette</td>
+            <td>2</td>
+            <td>2</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>0</td>
+            <td>3</td>
+            <td>1</td>
+            <td>nan</td>
+            <td>4</td>
+            <td><button onclick="addUnit('Claymore Class Corvette', 4)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Escort Carrier</td>
+            <td>0</td>
+            <td>2</td>
+            <td>1</td>
+            <td>3</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+            <td>C2</td>
+            <td>5</td>
+            <td><button onclick="addUnit('Escort Carrier', 5)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Heavy Transport</td>
+            <td>0</td>
+            <td>3</td>
+            <td>3</td>
+            <td>4</td>
+            <td>2S</td>
+            <td>5</td>
+            <td>1</td>
+            <td>3</td>
+            <td>nan</td>
+            <td>8</td>
+            <td><button onclick="addUnit('Heavy Transport', 8)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Transport (Special)</td>
+            <td>0</td>
+            <td>2</td>
+            <td>1</td>
+            <td>3</td>
+            <td>1</td>
+            <td>3</td>
+            <td>1</td>
+            <td>1</td>
+            <td>nan</td>
+            <td>3</td>
+            <td><button onclick="addUnit('Transport (Special)', 3)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Space Station</td>
+            <td>5</td>
+            <td>8</td>
+            <td>4</td>
+            <td>6</td>
+            <td>2S</td>
+            <td>4</td>
+            <td>0</td>
+            <td>4</td>
+            <td>C4, L1, B</td>
+            <td>15</td>
+            <td><button onclick="addUnit('Space Station', 15)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Weapons Platform</td>
+            <td>4</td>
+            <td>3</td>
+            <td>1</td>
+            <td>3</td>
+            <td>2</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>ST2</td>
+            <td>5</td>
+            <td><button onclick="addUnit('Weapons Platform', 5)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>Defence Monitor</td>
+            <td>3</td>
+            <td>5</td>
+            <td>1</td>
+            <td>3</td>
+            <td>2S</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>nan</td>
+            <td>6</td>
+            <td><button onclick="addUnit('Defence Monitor', 6)">Add</button></td>
+        </tr>
+    
+        <tr>
+            <td>System Ship</td>
+            <td>2</td>
+            <td>2</td>
+            <td>1</td>
+            <td>3</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>nan</td>
+            <td>2</td>
+            <td><button onclick="addUnit('System Ship', 2)">Add</button></td>
+        </tr>
+    
+    </tbody>
+</table>
+    <table id="groundUnitTable">
+        <thead>
+            <tr>
+                <th>Unit</th>
+                <th>Size</th>
+                <th>Firepower</th>
+                <th>Boarding</th>
+                <th>Special</th>
+                <th>RP</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+<tbody>
+    <tr>
+        <td>PDF Regiment</td>
+        <td>3</td>
+        <td>2</td>
+        <td>1</td>
+        <td></td>
+        <td>4</td>
+        <td><button onclick="addUnit('PDF Regiment', 4, 'ground')">Add</button></td>
+    </tr>
+    <tr>
+        <td>IG Regiment</td>
+        <td>2</td>
+        <td>3</td>
+        <td>1</td>
+        <td></td>
+        <td>6</td>
+        <td><button onclick="addUnit('IG Regiment', 6, 'ground')">Add</button></td>
+    </tr>
+    <tr>
+        <td>IG Armored Regiment</td>
+        <td>3</td>
+        <td>4</td>
+        <td>1</td>
+        <td>Armor</td>
+        <td>7</td>
+        <td><button onclick="addUnit('IG Armored Regiment', 7, 'ground')">Add</button></td>
+    </tr>
+    <tr>
+        <td>IG Drop Regiment</td>
+        <td>1</td>
+        <td>2</td>
+        <td>2</td>
+        <td>Drop</td>
+        <td>6</td>
+        <td><button onclick="addUnit('IG Drop Regiment', 6, 'ground')">Add</button></td>
+    </tr>
+    <tr>
+        <td>Titan Manipule</td>
+        <td>5</td>
+        <td>6</td>
+        <td>1</td>
+        <td>Titan</td>
+        <td>13</td>
+        <td><button onclick="addUnit('Titan Manipule', 13, 'ground')">Add</button></td>
+    </tr>
+    <tr>
+        <td>Space Marine Company</td>
+        <td>1</td>
+        <td>5</td>
+        <td>4</td>
+        <td>Drop, Shock</td>
+        <td>10</td>
+        <td><button onclick="addUnit('Space Marine Company', 10, 'ground')">Add</button></td>
+    </tr>
+    <tr>
+        <td>PD Guns</td>
+        <td>4</td>
+        <td>1</td>
+        <td>0</td>
+        <td>Structure, PDG (3)</td>
+        <td>9</td>
+        <td><button onclick="addUnit('PD Guns', 9, 'ground')">Add</button></td>
+    </tr>
+    <tr>
+        <td>PD Citadel</td>
+        <td>6</td>
+        <td>3</td>
+        <td>0</td>
+        <td>Structure, PDG (1)</td>
+        <td>4</td>
+        <td><button onclick="addUnit('PD Citadel', 4, 'ground')">Add</button></td>
+    </tr>
+</tbody>
+    </table>
+        </div>
+        <!-- Ground Units Table -->
+
+
+		<div id="selectedArmy">
+            <h2>Selected Fleet</h2>
+            <ul id="armyList"></ul>
+            <h3>Total RP: <span id="totalCost">0</span></h3>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

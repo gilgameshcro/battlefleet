@@ -1,0 +1,212 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    font-size: 12px; /* Reduced font size for overall body */
+}
+
+#container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+}
+
+#unitTable, #selectedArmy {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 5px;
+    font-size: 14px; /* Slightly smaller font size for table headers and cells */
+	font-weight: 600;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px; /* Smaller font size for buttons */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#armyList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#armyList li {
+    background-color: #ddd;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    font-size: 13px; /* Smaller font size for list items */
+}
+
+/* Custom style for the first column to make it wider */
+th:first-child, td:first-child {
+    width: 20%; /* Adjusts the width of the first column */
+    min-width: 150px; /* Ensures the first column has a minimum width */
+    font-size: 12px; /* Slightly smaller font size for table headers and cells */
+	font-weight: 400;
+}
+
+
+
+.remove-icon {
+    cursor: pointer;
+    padding: 0 5px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: #ff0000; /* Red color for the icon */
+    user-select: none; /* Prevents text selection */
+}
+
+/* Hover effect for the "X" icon */
+.remove-icon:hover {
+    color: #cc0000;
+}
+
+th:not(:first-child), td:not(:first-child) {
+    text-align: center;
+}
+
+
+#container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px; /* or you may choose to remove this limit to allow the container to fill the screen */
+    padding-right: 0; /* Remove the previous padding-right if set */
+}
+
+#unitTable {
+    flex: 3; /* Takes up 3 parts of the flex space */
+    padding: 20px;
+    box-sizing: border-box;
+    width: calc(75% - 40px); /* Adjusts width to 75% of the container minus padding */
+    max-width: calc(75% - 40px); /* Ensures that it does not exceed 75% width */
+}
+
+#selectedArmy {
+    flex: 1; /* Takes up 1 part of the flex space */
+    position: fixed; /* Fixed position relative to the viewport */
+    right: 0; /* Positioned at the right edge of the viewport */
+    top: 0; /* Positioned at the top of the viewport */
+    width: 25%; /* Set width to 25% of the viewport */
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Adds scroll to the div if the content overflows */
+    background-color: white; /* Ensure the background is solid so content behind doesn't show through */
+    box-shadow: -4px 0 8px rgba(0,0,0,0.1); /* Optional: Adds shadow for better separation */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Rest of your styles remain unchanged */
+
+
+/* Zebra striping for table rows */
+tr:nth-child(odd) { /* Odd rows */
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(even) { /* Even rows */
+    background-color: #e9e9e9;
+}
+
+/* Keep the header row a different color for contrast */
+thead tr {
+    background-color: #007bff;
+    color: white;
+}
+
+
+
+/* Apply similar zebra striping for consistency */
+#groundUnitTable tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+#groundUnitTable tr:nth-child(even) {
+    background-color: #e9e9e9;
+}
+
+/* Same styles for the table */
+#groundUnitTable table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Add space between the two tables */
+}
+
+#groundUnitTable th, #groundUnitTable td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+}
+
+#groundUnitTable th {
+    background-color: #9b451d;
+    color: white;
+}
+
+/* Center text for specific columns if necessary */
+#groundUnitTable td:not(:first-child) {
+    text-align: center;
+}
+
+
+
+#groundUnitTable button {
+    background-color: #9b451d;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px; /* Smaller font size for buttons */
+}
+
+
+.ground-unit {
+    background-color: #eed3a8 !important;
+}
+
+
+#armyList li {
+    background-color: #ddd;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    font-size: 13px; /* Smaller font size for list items */
+    display: flex; /* Make the list item a flex container */
+    justify-content: space-between; /* Space between content and remove icon */
+    align-items: center; /* Center items vertically */
+}
+
+.remove-icon {
+    cursor: pointer;
+    padding: 0 5px;
+    font-weight: bold;
+    color: #ff0000; /* Red color for the icon */
+    user-select: none; /* Prevents text selection */
+    /* Removed margin-left as flexbox is used for spacing */
+}
